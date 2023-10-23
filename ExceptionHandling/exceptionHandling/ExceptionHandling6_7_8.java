@@ -10,7 +10,7 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 
-//the finally block ALWAYS runs, whether an exception was caught or not 
+//the finally block ALWAYS runs after the try block exists, whether an exception was caught or not 
 
 public class ExceptionHandling6_7_8 {
 	public static void main(String[] args) {
