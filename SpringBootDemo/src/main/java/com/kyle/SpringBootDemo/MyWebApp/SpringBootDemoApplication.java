@@ -2,10 +2,12 @@ package com.kyle.SpringBootDemo.MyWebApp;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.context.annotation.ComponentScan;
 
 @SpringBootApplication
-//component scan tells spring where to search for annotated classes 
+//component scan tells spring where to search for annotated classes
+//by default only scans current package, so need to tell it to scan all relevant packages
 @ComponentScan("com.kyle")
 /*
  * @SpringBootApplication utilizes the default implmentations of 
@@ -15,7 +17,9 @@ import org.springframework.context.annotation.ComponentScan;
  */
 public class SpringBootDemoApplication {
 	public static void main(String[] args) {
-		SpringApplication.run(SpringBootDemoApplication.class, args);
+		ConfigurableApplicationContext context = SpringApplication.run(SpringBootDemoApplication.class, args);
+		context.getClass();
+		
 	}
 	
 }
